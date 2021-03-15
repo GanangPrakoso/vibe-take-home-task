@@ -82,9 +82,30 @@ function fetchCategory() {
   }
   $("#category-section-container").html(content);
 }
+
+function fetchIgPics() {
+  content = ``;
+
+  for (let i = 0; i < 14; i++) {
+    let instagramPic;
+    if (i % 2 === 0) {
+      instagramPic = `./assets/instagram_pic.jpg`;
+    } else if (i % 3 === 0) {
+      instagramPic = `./assets/instagram_pic_2.jpg`;
+    } else {
+      instagramPic = `./assets/instagram_pic_1.jpg`;
+    }
+
+    content += `
+    <div class="instagram-pic" style="background-image: url(${instagramPic})"></div>
+    `;
+  }
+  $("#instagram-pic-container").html(content);
+}
 // =========================================================================================
 
 $(document).ready(() => {
   fetchProduct();
   fetchCategory();
+  fetchIgPics();
 });

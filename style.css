@@ -1,6 +1,7 @@
 body {
   margin: 0%;
   padding: 0%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .custom-navbar {
@@ -274,11 +275,129 @@ body {
   align-items: center;
 }
 
+.consultation-right-section {
+  margin-left: 130px;
+}
 .consultation-headline {
   font-family: "Playfair Display", serif;
   font-size: 36px;
   letter-spacing: 0.1em;
-text-transform: uppercase;
-color: #54301A;
-text-transform: uppercase;
+  text-transform: uppercase;
+  color: #54301a;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.consultation-caption {
+  color: #9e8872;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+.consultation-button {
+  padding: 9px 38px;
+  background-color: #54301a;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.instagram-section {
+  background: #e5e5e5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-name-container {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  color: rgba(84, 48, 26, 0.65);
+  font-size: 16px;
+  align-items: center;
+  margin-bottom: 68px;
+}
+
+#instagram-pic-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.instagram-pic {
+  height: 200px;
+  width: 200px;
+  background-image: url("./assets/instagram_pic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer {
+  padding: 55px 143px;
+}
+
+.footer-item-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footer-headline {
+  color: #54301a;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.footer-item-list {
+  color: #9e8872;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.footer-item-list li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-item-list i {
+  cursor: pointer;
+  font-size: 20px;
+  color: #9e8872;
+}
+
+.footer-last-section {
+  display: flex;
+}
+
+.email-submit-button {
+  background-color: #54301a;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-width: 1px;
+  margin-left: 5px;
+}
+
+.email-form-style {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
 }
