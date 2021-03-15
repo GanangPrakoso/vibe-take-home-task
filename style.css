@@ -58,6 +58,16 @@ body {
   height: 40rem;
   background: black;
   position: relative;
+  width: 100%;
+}
+
+.carousel-image {
+  display: initial;
+  width: 100%;
+}
+
+.carousel-image-mobile {
+  display: none;
 }
 
 .carousel-container {
@@ -400,4 +410,58 @@ body {
 
 input {
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 1150px) {
+  .navbar-item-container {
+    display: none;
+  }
+
+  .carousel-item {
+    height: 400px;
+  }
+
+  .carousel-container {
+    display: none;
+  }
+
+  .carousel-image {
+    display: none;
+  }
+
+  .carousel-image-mobile {
+    display: initial;
+    height: 100%;
+    object-position: -250px 0;
+  }
+
+  .logo-container {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .add-section-container {
+    padding: 25px;
+    flex-direction: column;
+    height: initial;
+  }
+
+  .first-add {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 14px;
+  }
+
+  .second-section-container {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .first-second-section {
+    width: 100%;
+  }
+
+  .second-second-section {
+    width: 100%;
+  }
 }
