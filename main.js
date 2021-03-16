@@ -1,26 +1,27 @@
+const productData = [
+  {
+    product: "PRETINOL™ SERUM",
+    price: "150.00",
+    image: "./assets/product.png",
+  },
+  {
+    product: "PRETINOL™ CREAM",
+    price: "80.00",
+    image: "./assets/product_1.png",
+  },
+  {
+    product: "PRETINOL™ EYE CREAM",
+    price: "100.00",
+    image: "./assets/product_2.png",
+  },
+  {
+    product: "PRETINOL™ CREAM",
+    price: "50.00",
+    image: "./assets/product_3.png",
+  },
+];
+
 function fetchProduct() {
-  const productData = [
-    {
-      product: "PRETINOL™ SERUM",
-      price: "150.00",
-      image: "./assets/product.png",
-    },
-    {
-      product: "PRETINOL™ CREAM",
-      price: "80.00",
-      image: "./assets/product_1.png",
-    },
-    {
-      product: "PRETINOL™ EYE CREAM",
-      price: "100.00",
-      image: "./assets/product_2.png",
-    },
-    {
-      product: "PRETINOL™ CREAM",
-      price: "50.00",
-      image: "./assets/product_3.png",
-    },
-  ];
   let content = ``;
   for (let i = 0; i < productData.length; i++) {
     content += `

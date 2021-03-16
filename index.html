@@ -9,6 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&family=Playfair+Display&display=swap"
@@ -53,11 +57,12 @@
             class="carousel-image"
             style="opacity: 0.9"
           />
-          <img
-            src="./assets/kendall-jenner-cute-new.jpg"
-            class="carousel-image-mobile"
-            style="opacity: 0.9"
-          />
+          <div class="image-gradient">
+            <img
+              src="./assets/ahava-banner.jpg"
+              class="carousel-image-mobile"
+            />
+          </div>
           <div class="carousel-container">
             <div class="carousel-headline">
               Dead Sea <br />
@@ -77,7 +82,12 @@
         </div>
         <div class="carousel-item" data-interval="1000">
           <img src="./assets/kendall.jpg" class="carousel-image" />
-          <img src="./assets/kendall.jpg" class="carousel-image-mobile" />
+          <div class="image-gradient">
+            <img
+              src="./assets/ahava-banner.jpg"
+              class="carousel-image-mobile"
+            />
+          </div>
           <div class="carousel-container">
             <div class="carousel-headline">
               Dead Sea <br />
@@ -132,65 +142,20 @@
     <!-- adds section -->
     <div class="add-section-container">
       <div class="first-add">
-        <div
-          style="
-            background-image: url('./assets/add-1.png');
-            background-size: cover;
-            height: 100%;
-            width: 350px;
-            background-position: center;
-          "
-        ></div>
+        <div class="first-add-pic"></div>
 
         <div class="first-add-text-container">
-          <div
-            style="
-              font-family: 'Playfair Display', serif;
-              color: #54301a;
-              font-size: 25px;
-              line-height: 0;
-              margin-bottom: 5px;
-            "
-          >
-            SUPERCHARGE
-          </div>
-          <br />
-          <span
-            style="
-              font-family: 'Playfair Display', serif;
-              color: #54301a;
-              font-size: 45px;
-              line-height: 0;
-              font-weight: 600;
-              word-wrap: break-word;
-            "
-          >
-            YOUR SKIN
-          </span>
-          <div
-            style="
-              font-family: 'Montserrat', sans-serif;
-              color: #9e8872;
-              font-size: 15px;
-              margin-top: 10px;
-              font-weight: bold;
-            "
-          >
+          <div class="first-add-headline-first-row">SUPERCHARGE</div>
+          <div class="first-add-headline-second-row">YOUR SKIN</div>
+          <div class="first-add-headline-third-row">
             Deadsea Osmoter Concentrate
           </div>
         </div>
       </div>
+
       <div class="second-section-container">
         <div class="first-second-section">
-          <div
-            style="
-              background-image: url('./assets/vespa_add.jpg');
-              background-size: cover;
-              height: 100%;
-              width: 250px;
-              background-position: center;
-            "
-          ></div>
+          <div class="first-second-section-image"></div>
           <div style="margin-left: 10px; margin-top: 10px">
             <span
               style="
@@ -276,6 +241,72 @@
           ></div>
         </div>
       </div>
+
+      <div class="second-section-container-mobile">
+        <div
+          class="first-add"
+          style="background-color: #eec7b8; justify-content: flex-start"
+        >
+          <div
+            class="first-add-pic"
+            style="background-image: url('./assets/vespa_add.jpg'); width: 60%"
+          ></div>
+          <div
+            class="first-add-text-container"
+            style="width: 30%; margin-left: 0px"
+          >
+            <div
+              class="first-add-headline-first-row"
+              style="font-size: 24px; line-height: 25px; font-weight: 700"
+            >
+              FREE
+            </div>
+            <div class="first-add-headline-second-row" style="font-size: 16px">
+              LOCAL <br />
+              DELIVERY
+            </div>
+            <div
+              class="first-add-headline-third-row"
+              style="font-size: 7px; margin-top: 0px"
+            >
+              with orders over $100
+            </div>
+          </div>
+        </div>
+        <div class="first-add" style="margin-bottom: 0px; background: #e6c264">
+          <div class="first-add-text-container">
+            <span
+              style="
+                font-family: 'Playfair Display', serif;
+                color: #54301a;
+                font-size: 24px;
+                line-height: 1;
+                font-weight: 600;
+              "
+              >DON'T MISS A THING</span
+            >
+            <div class="facebook-add-container">
+              <img
+                src="./assets/fb.png"
+                style="height: 12px; margin-left: -5px"
+              />
+              <span
+                style="
+                  font-family: 'Montserrat', sans-serif;
+                  color: #54301a;
+                  font-weight: bold;
+                  font-size: 12px;
+                "
+                >Like Us</span
+              >
+            </div>
+          </div>
+          <div
+            class="first-add-pic"
+            style="background-image: url('./assets/mobile_add.jpg')"
+          ></div>
+        </div>
+      </div>
     </div>
     <!-- adds section -->
     <!-- online exclusive section -->
@@ -284,10 +315,85 @@
       <div id="exclusive-item-container">
         <!-- product goes here -->
       </div>
+      <!-- product slideable -->
+      <div
+        id="product-slide"
+        class="carousel"
+        data-flickity='{ "lazyLoad": 1 }'
+      >
+        <div class="carousel-cell">
+          <div class="product-container">
+            <div
+              style="position: relative; display: flex; justify-content: center"
+            >
+              <img src="./assets/product.png" style="max-width: 80%" />
+              <i
+                class="far fa-heart"
+                style="position: absolute; top: 0; right: 0"
+              ></i>
+            </div>
+            <div class="product-name">PRETINOL™ SERUM</div>
+            <div class="product-description">
+              Safe and efficient Retinol anti-wrinkle serum targets wrinkle
+              reduction and visibly improves skin's radiance and luminosity.
+            </div>
+            <div class="product-price">S$150.00</div>
+            <div class="button-carousel">
+              <span>add to cart</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="product-container">
+            <div
+              style="position: relative; display: flex; justify-content: center"
+            >
+              <img src="./assets/product_2.png" style="max-width: 80%" />
+              <i
+                class="far fa-heart"
+                style="position: absolute; top: 0; right: 0"
+              ></i>
+            </div>
+            <div class="product-name">PRETINOL™ EYE CREAM</div>
+            <div class="product-description">
+              Safe and efficient Retinol anti-wrinkle serum targets wrinkle
+              reduction and visibly improves skin's radiance and luminosity.
+            </div>
+            <div class="product-price">S$90.00</div>
+            <div class="button-carousel">
+              <span>add to cart</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="product-container">
+            <div
+              style="position: relative; display: flex; justify-content: center"
+            >
+              <img src="./assets/product_2.png" style="max-width: 80%" />
+              <i
+                class="far fa-heart"
+                style="position: absolute; top: 0; right: 0"
+              ></i>
+            </div>
+            <div class="product-name">PRETINOL™ CREAM</div>
+            <div class="product-description">
+              Safe and efficient Retinol anti-wrinkle serum targets wrinkle
+              reduction and visibly improves skin's radiance and luminosity.
+            </div>
+            <div class="product-price">S$168.00</div>
+            <div class="button-carousel">
+              <span>add to cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- product slideable -->
       <div class="find-out-more-button"><span>FIND OUT MORE</span></div>
       <div id="category-section-container">
         <!-- category goes here -->
       </div>
+
       <div class="consultation-section">
         <img src="./assets/ads.jpg" style="width: 45%" />
         <div class="consultation-right-section">
@@ -303,11 +409,28 @@
           <div class="consultation-button">BEGIN CONSULTATION</div>
         </div>
       </div>
+      <!--  -->
+      <div class="consultation-section-mobile">
+        <div class="consultation-headline">Find Your Fit</div>
+        <img src="./assets/ads.jpg" style="width: 100%; margin-bottom: 20px" />
+        <div class="consultation-right-section">
+          <div class="consultation-caption">
+            Create your customized Beauty & Spa skincare routine by filling out
+            brief questionnaire
+          </div>
+          <div class="consultation-caption">
+            Login/Register for an Beauty & Spa account to save your customized
+            skincare routine.
+          </div>
+          <div class="consultation-button">BEGIN CONSULTATION</div>
+        </div>
+      </div>
     </div>
     <!-- online exclusive section -->
+
     <!-- instagram section -->
     <div class="instagram-section">
-      <div class="online-exclusive-headline" style="margin-bottom: 12px">
+      <div class="online-exclusive-headline" style="margin-bottom: 9px">
         <span>FOLLOW US</span>
       </div>
       <div class="account-name-container">
@@ -319,6 +442,7 @@
       </div>
     </div>
     <!-- instagram section -->
+
     <footer class="footer">
       <div class="footer-item-container">
         <div>
@@ -384,8 +508,94 @@
         </div>
       </div>
     </footer>
+
+    <footer class="footer-mobile">
+      <div style="display: flex; justify-content: space-between">
+        <div>
+          <div class="footer-headline">discover</div>
+          <div class="footer-item-list">
+            <ul style="list-style: none; padding: 0px">
+              <li>Our Story</li>
+              <li>Press</li>
+              <li>Gives Back</li>
+              <li>R&D</li>
+              <li>Our Ingrredients</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="footer-headline">support</div>
+          <div class="footer-item-list">
+            <ul style="list-style: none; padding: 0px">
+              <li>Stores</li>
+              <li>Customer Service</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <div class="footer-headline" style="margin-top: 25px">
+          join our mailing list
+        </div>
+        <p
+          class="footer-item-list"
+          style="font-weight: normal; text-align: center"
+        >
+          Sign up now and be the first to know about exclusive offers, product
+          updates, and exciting news and announcements.
+        </p>
+        <form action="" class="email-form-style">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            style="
+              width: 100%;
+              font-family: 'Montserrat', sans-serif;
+              padding: 10px;
+            "
+          />
+          <button class="email-submit-button" type="submit">SUBMIT</button>
+        </form>
+        <div class="social-media-container-mobile">
+          <i
+            class="fab fa-instagram"
+            style="font-size: 24px; margin-right: 30px; color: #54301a"
+          ></i>
+          <i
+            class="fab fa-facebook-f"
+            style="font-size: 24px; color: #54301a"
+          ></i>
+        </div>
+      </div>
+      <div class="footer-last-section">
+        <div class="footer-item-list" style="font-weight: 500">
+          © 2021 Beauty & Spa. All Rights reserved.
+        </div>
+        <div
+          class="footer-item-list"
+          style="font-weight: 500; margin-bottom: 5px"
+        >
+          Terms & Conditions Privacy Policy
+        </div>
+        <div
+          class="footer-item-list"
+          style="margin-bottom: 5px; font-weight: 500"
+        >
+          Privacy Policy
+        </div>
+      </div>
+    </footer>
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
       integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"

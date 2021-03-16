@@ -133,7 +133,32 @@ body {
 }
 
 .first-add-text-container {
-  margin-right: 10%;
+  margin-left: 10%;
+  width: 50%;
+}
+
+.first-add-headline-first-row {
+  font-family: "Playfair Display", serif;
+  color: #54301a;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.first-add-headline-second-row {
+  font-family: "Playfair Display", serif;
+  color: #54301a;
+  font-size: 45px;
+  font-weight: 600;
+  word-wrap: break-word;
+  line-height: 30px;
+}
+
+.first-add-headline-third-row {
+  font-family: "Montserrat", sans-serif;
+  color: #9e8872;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .second-section-container {
@@ -408,17 +433,49 @@ body {
   align-items: center;
 }
 
-input {
-  font-family: "Montserrat", sans-serif;
+.first-second-section-image {
+  background-image: url("./assets/vespa_add.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  background-position: center;
 }
 
-@media screen and (max-width: 1150px) {
+input {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #d1cdc6;
+  font-size: 14px;
+}
+
+.first-add-pic {
+  background-image: url("./assets/add-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+  background-position: center;
+}
+
+.carousel-cell {
+  width: 100%; /* full width */
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+::placeholder {
+  color: #d1cdc6;
+  opacity: 1;
+}
+
+@media screen and (max-width: 720px) {
   .navbar-item-container {
     display: none;
-  }
-
-  .carousel-item {
-    height: 400px;
   }
 
   .carousel-container {
@@ -432,7 +489,23 @@ input {
   .carousel-image-mobile {
     display: initial;
     height: 100%;
-    object-position: -250px 0;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: -250px 0; */
+  }
+
+  .image-gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.856) 100%
+    );
   }
 
   .logo-container {
@@ -450,6 +523,7 @@ input {
     width: 100%;
     margin: 0px;
     margin-bottom: 14px;
+    height: 150px;
   }
 
   .second-section-container {
@@ -463,5 +537,182 @@ input {
 
   .second-second-section {
     width: 100%;
+  }
+
+  .first-add-headline-first-row {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .first-add-headline-second-row {
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  .first-add-headline-third-row {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+
+  .first-add-text-container {
+    margin-left: 5%;
+  }
+
+  .second-section-container {
+    display: none;
+  }
+
+  .carousel-item {
+    height: 25rem;
+  }
+
+  .online-exclusive-section {
+    padding: 0px 25px;
+    display: inherit;
+  }
+
+  .online-exclusive-headline {
+    margin: 30px 0px;
+    font-size: 24px;
+    margin-top: 45px;
+  }
+
+  #exclusive-item-container {
+    overflow: auto;
+    display: none;
+  }
+
+  .find-out-more-button {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 14px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-carousel {
+    margin-bottom: 40px;
+  }
+
+  #category-section-container {
+    display: none;
+  }
+
+  .consultation-section {
+    display: none;
+  }
+
+  .consultation-section-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 35px;
+    align-items: center;
+  }
+
+  .consultation-headline {
+    font-size: 24px;
+  }
+
+  .consultation-right-section {
+    margin-left: 0px;
+  }
+
+  .consultation-caption {
+    text-align: center;
+    font-size: 14px;
+    color: #9e8872;
+  }
+
+  .consultation-button {
+    padding: 9px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .instagram-section {
+    padding: 0px 25px;
+  }
+
+  #instagram-pic-container {
+    height: 200px;
+    margin-bottom: 54px;
+  }
+
+  .instagram-pic {
+    height: 100px;
+    width: 100px;
+  }
+
+  .account-name-container {
+    margin-bottom: 35px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .footer-mobile {
+    padding: 35px 25px;
+  }
+
+  .footer-item-list {
+    font-weight: normal;
+  }
+
+  .footer-headline {
+    font-size: 24px;
+  }
+
+  .email-submit-button {
+    background-color: #54301a;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    border-width: 1px;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  input {
+    text-align: center;
+  }
+
+  .social-media-container-mobile {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  .footer-headline {
+    margin-bottom: 10px;
+  }
+
+  .footer-last-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .second-section-container-mobile {
+    display: none;
+  }
+
+  #product-slide {
+    display: none;
+  }
+
+  .consultation-section-mobile {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: none;
   }
 }
