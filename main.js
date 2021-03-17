@@ -21,6 +21,16 @@ const productData = [
   },
 ];
 
+// =============================================================================================================
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "80%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 function fetchProduct() {
   let content = ``;
   for (let i = 0; i < productData.length; i++) {
@@ -109,4 +119,13 @@ $(document).ready(() => {
   fetchProduct();
   fetchCategory();
   fetchIgPics();
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 200) {
+      $(".custom-navbar").css("background-color", "white");
+    } else {
+      $(".custom-navbar").css("background-color", "transparent");
+    }
+  });
 });

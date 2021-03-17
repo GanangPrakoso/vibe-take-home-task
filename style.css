@@ -5,15 +5,18 @@ body {
 }
 
 .custom-navbar {
-  position: absolute;
-  top: 0%;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   width: 100%;
   background-color: transparent;
   overflow: hidden;
+  z-index: 100;
+  transition: 0.4s;
 }
 
 .logo-container {
@@ -74,7 +77,7 @@ body {
   position: absolute;
   bottom: 100px;
   right: 0;
-  width: 600px;
+  width: 40%;
   margin-right: 30px;
 }
 
@@ -473,13 +476,61 @@ input {
   opacity: 1;
 }
 
+.login-register-button {
+  margin-left: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #54301a;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  padding-top: 15px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden !important;
+  white-space: nowrap;
+}
+
+.sidenav a {
+  font-family: "Montserrat", sans-serif;
+
+  margin-left: 30px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #54301a;
+  transition: 0.3s;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  overflow-x: hidden !important;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav-close-button {
+  margin-left: 30px;
+  margin-bottom: 36px;
+  font-size: 30px;
+  font-weight: 100;
+  color: #54301a;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 720px) {
   .navbar-item-container {
-    display: none;
-  }
-
-  .carousel-container {
-    display: none;
+    margin-right: 25px;
   }
 
   .carousel-image {
@@ -593,6 +644,8 @@ input {
 
   .button-carousel {
     margin-bottom: 40px;
+    height: initial;
+    padding: 8px;
   }
 
   #category-section-container {
@@ -697,6 +750,51 @@ input {
     align-items: center;
     font-weight: 600;
   }
+
+  .carousel-headline {
+    display: none;
+  }
+
+  .carousel-headline-mobile {
+    font-size: 24px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+  }
+
+  .carousel-container {
+    width: 70%;
+    margin-bottom: 0;
+    right: initial;
+    bottom: 50px;
+    margin-left: 8%;
+  }
+
+  .carousel-description {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .carousel-description {
+    margin-top: 5px;
+    margin: bottom 20px;
+  }
+
+  .navbar-item-desktop {
+    display: none;
+  }
+
+  .navbar-item-container i {
+    margin-right: 16px;
+    font-size: 20px;
+  }
+
+  .navbar-burger {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (min-width: 720px) {
@@ -713,6 +811,14 @@ input {
   }
 
   .footer-mobile {
+    display: none;
+  }
+
+  .carousel-headline-mobile {
+    display: none;
+  }
+
+  .navbar-burger {
     display: none;
   }
 }
